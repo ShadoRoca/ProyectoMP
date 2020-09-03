@@ -1,12 +1,13 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Clase que representa un ejercito, los pelotones son representados como
  * comandantes ya que estos ya cuentan con una lista de soldados.
  */
-public abstract class Ejercito {
+public abstract class Ejercito implements Sujeto{
 
-    private ArrayList<Comandante> comandantes = new ArrayList<>();
+    private List<Comandante> comandantes = new ArrayList<>();
     private double vida;
     private Enemigo enemigo;
 
@@ -14,9 +15,9 @@ public abstract class Ejercito {
      * Recibe la orden para ser transmitida a todos los comandantes
      * @param i la orden: 1 es atacar, 2 es mover y 3 reportar
      */
-    public void recibeOrden(int i) {
+    public void notificaOrden(int i) {
         for (Comandante comandante : comandantes) {
-            comandante.ordenar(i, enemigo);
+            comandante.updateOrden(i, enemigo);
         }
     }
 

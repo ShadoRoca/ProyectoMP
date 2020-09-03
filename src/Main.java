@@ -30,10 +30,10 @@ public class Main{
 		ejercito.recibeOrden(2);
 		ejercito.recibeOrden(3);*/
 
-		ejercito.recibeOrden(3);
-		ejercito.recibeOrden(2);
-		ejercito.recibeOrden(1);
-		ejercito.recibeOrden(1);
+		ejercito.notificaOrden(3);
+		ejercito.notificaOrden(2);
+		ejercito.notificaOrden(1);
+		ejercito.notificaOrden(1);
 		System.out.println("La vida del mounstro es: " + xd.getVida());
 	
 	

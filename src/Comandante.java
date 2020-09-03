@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Comandante extends Soldado {
+public class Comandante extends Soldado implements Observador {
 	ArrayList<Soldado> subordinados;
 
 	public Comandante(String id, String n, int dist) {
@@ -21,6 +21,10 @@ public class Comandante extends Soldado {
 
 	public Soldado getChild(int i) {
 		return (Soldado) subordinados.get(i);
+	}
+
+	public void updateOrden(int i, Enemigo e){
+		this.ordenar(i,e);
 	}
 
 	public void ordenar(int i, Enemigo e) {

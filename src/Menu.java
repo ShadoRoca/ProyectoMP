@@ -1,6 +1,6 @@
 public class Menu {
-    
-    FabricaEjercitos fabricaEjercitos;
+
+    FabricaEjercitos fabricaEjercitos = new FabricaEjercitos();
     Ejercito ejercito;
 
     
@@ -15,17 +15,22 @@ public class Menu {
         switch (i) {
             case 1:
                 ejercito = fabricaEjercitos.getEjercito("explorador");
+                System.out.println("Escogiste el ejercito explorador:\n" + ejercito.getInfoEjercito());
                 break;
             case 2:
                 ejercito = fabricaEjercitos.getEjercito("default");
+                System.out.println("Escogiste el ejercito default:\n" + ejercito.getInfoEjercito());
                 break;
             case 3:
                 ejercito = fabricaEjercitos.getEjercito("kamikaze");
+                System.out.println("Escogiste el ejercito kamikaze:\n" + ejercito.getInfoEjercito());
                 break;
             default:
                 System.out.println("No es una opcion valida, vuelve a escoger...");
                 break;
         }
     }
+
+
 
 }

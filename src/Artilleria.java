@@ -26,4 +26,9 @@ public class Artilleria extends Soldado{
 				return;
 		}
 	}
+
+	@Override
+	public String getInfo() {
+		return "   Soldado/a de tipo Artillero " + name + " con id " + id + "."; 
+	}
 }

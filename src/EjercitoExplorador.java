@@ -1,3 +1,6 @@
+/**
+ * Representa el ejercito explorador
+ */
 public class EjercitoExplorador extends Ejercito {
 
     public EjercitoExplorador() {

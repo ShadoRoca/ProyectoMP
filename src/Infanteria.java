@@ -25,4 +25,9 @@ public class Infanteria extends Soldado{
 				return;
 		}
 	}
+
+	@Override
+	public String getInfo() {
+		return "   Soldado/a de tipo Infanteria " + name + " con id " + id + "."; 
+	}
 }

@@ -64,4 +64,14 @@ public abstract class Ejercito implements Sujeto{
     public void setEnemigo(Enemigo e){
         this.enemigo = e;
     }
+
+    public String getInfoEjercito() {
+        int i = 1;
+        String c = "";
+        for (Comandante comandante : comandantes) {
+            c += "Peloton " + i + ".\n" + comandante.getInfo();
+            i++;
+        }
+        return "\nLa informacion de este ejercito es: \n" + c;
+    }
 }

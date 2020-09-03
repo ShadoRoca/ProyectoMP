@@ -25,4 +25,9 @@ public class Caballeria extends Soldado{
 				return;
 		}
 	}
+
+	@Override
+	public String getInfo() {
+		return "   Soldado/a de tipo Caballeria " + name + " con id " + id + "."; 
+	}
 }

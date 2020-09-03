@@ -75,4 +75,6 @@ public abstract class Soldado {
 		System.out.println(reporte.reportar(this));
 	}
 
+	public abstract String getInfo();
+
 }

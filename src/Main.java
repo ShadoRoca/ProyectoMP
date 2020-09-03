@@ -35,6 +35,8 @@ public class Main{
 		ejercito.notificaOrden(1);
 		ejercito.notificaOrden(1);
 		System.out.println("La vida del mounstro es: " + xd.getVida());
+
+		System.out.println(ejercito.getInfoEjercito());
 	
 	
 	}

@@ -10,6 +10,6 @@ public interface MovementBehaviour {
      * @param name el nombre del soldado
      * @return el string que se mostrara en consola con la informacion de la accion
      */
-    public String mover(String id, String name, double distancia, Soldado s);
+    public String mover(Soldado s);
 
 }

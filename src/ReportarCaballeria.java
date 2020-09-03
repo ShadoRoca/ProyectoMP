@@ -6,7 +6,7 @@
 public class ReportarCaballeria implements ReportBehaviour{
 
 	@Override
-	public String reportar(String id, String name){
-		return "El soldado " + name + " con id " + id + " es un Caballero.";
+	public String reportar(Soldado s){
+		return "El soldado " + s.getNombre() + " con id " + s.getId() + " es un Caballero.";
 	}
 }

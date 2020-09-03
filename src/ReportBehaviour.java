@@ -10,6 +10,6 @@ public interface ReportBehaviour {
      * @param name el nombre del soldado
      * @return el string que se mostrara en consola con la informacion de la accion
      */
-    public String reportar(String id, String name);
+    public String reportar(Soldado s);
     
 }

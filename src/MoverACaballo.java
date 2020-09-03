@@ -6,12 +6,12 @@
 public class MoverACaballo implements MovementBehaviour {
 
     @Override
-    public String mover(String id, String name, double distancia, Soldado s) {
-        if (distancia > 0) {
-        	s.setDistancia(distancia - 25.00);
-            return "El soldado " + name + " con id " + id + " se mueve hacia el enemigo en caballo.";
+    public String mover(Soldado s) {
+        if (s.getDistancia() > 0) {
+        	s.setDistancia(s.getDistancia() - 25.00);
+            return "El soldado " + s.getNombre() + " con id " + s.getId() + " se mueve hacia el enemigo en caballo.";
         } else {
-            return "El soldado " + name + " con id " + id + " ya alcanzo al enemigo, listo para atacar!";
+            return "El soldado " + s.getNombre() + " con id " + s.getId() + " ya alcanzo al enemigo, listo para atacar!";
         }
     }
 

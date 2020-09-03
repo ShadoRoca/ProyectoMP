@@ -6,12 +6,12 @@
 public class MoverConCanon implements MovementBehaviour {
 
     @Override
-    public String mover(String id, String name, double distancia, Soldado s) {
-        if (distancia > 0) {
-        	s.setDistancia(distancia - 10.00);
-            return "El soldado " + name + " con id " + id + " se mueve hacia el enemigo con su canon.";
+    public String mover(Soldado s) {
+        if (s.getDistancia() > 0) {
+        	s.setDistancia(s.getDistancia() - 10.00);
+            return "El soldado " + s.getNombre() + " con id " + s.getId() + " se mueve hacia el enemigo con su canon.";
         } else {
-            return "El soldado " + name + " con id " + id + " ya alcanzo al enemigo, listo para atacar!";
+            return "El soldado " + s.getNombre() + " con id " + s.getId() + " ya alcanzo al enemigo, listo para atacar!";
         }
     }
 

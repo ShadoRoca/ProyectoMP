@@ -5,12 +5,15 @@
 public class AtacarConMosquete implements AttackBehaviour {
 
     @Override
-    public String atacar(String id, String name, double distancia) {
-        if (distancia > 0) {
-            return "El soldado " + name + " con id " + id
-                    + " aun no puede atacar al enemigo, se encuentra a una distancia de " + distancia;
+    public String atacar(Soldado s) {
+    	if(s.getVida() == 0){
+    		return "El soldado " + s.getNombre() + " con id " + s.getId() + " no puede atacar al enemigo,"
+    				+ " ya que ha perdido todos sus puntos de vida";
+    	} else if (s.getDistancia() > 0) {
+            return "El soldado " + s.getNombre()  + " con id " + s.getId()
+                    + " aun no puede atacar al enemigo, se encuentra a una distancia de " + s.getDistancia();
         }
-        return "El soldado " + name + " con id " + id + " atacó al enemigo con su mosquete e hizo 30 puntos de daño";
+        return "El soldado " + s.getNombre() + " con id " + s.getId() + " atacó al enemigo con su mosquete e hizo 30 puntos de daño";
     }
 
 }

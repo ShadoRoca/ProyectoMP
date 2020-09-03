@@ -10,6 +10,6 @@ public interface AttackBehaviour {
      * @param name el nombre del soldado
      * @return el string que se mostrara en consola con la informacion de la accion
      */
-    public String atacar(String id, String name, double distancia);
+    public String atacar(Soldado s);
 
 }

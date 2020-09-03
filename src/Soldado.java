@@ -64,15 +64,15 @@ public abstract class Soldado {
 	}
 
 	public void ataca(){
-		System.out.println(ataque.atacar(id,name,distancia));
+		System.out.println(ataque.atacar(this));
 	}
 
 	public void moverse(){
-		System.out.println(movimiento.mover(id,name,distancia,this));
+		System.out.println(movimiento.mover(this));
 	}
 
 	public void reportarse(){
-		System.out.println(reporte.reportar(id,name));
+		System.out.println(reporte.reportar(this));
 	}
 
 }

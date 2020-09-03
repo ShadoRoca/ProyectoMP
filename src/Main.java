@@ -19,7 +19,7 @@ public class Main{
 		Ejercito ejercito = fabricaEjercitos.getEjercito("kamikaze");
 		Ejercito ejercitoEnemigo = fabricaEjercitos.getEjercito("default");
 
-		ejercito.recibeOrden(1);
+		ejercito.recibeOrden(2);
 		ejercito.recibeOrden(2);
 		ejercito.recibeOrden(3);
 		ejercito.recibeOrden(1);

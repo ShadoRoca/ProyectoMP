@@ -44,7 +44,7 @@ public abstract class Soldado {
 		reporte = a;
 	}
 
-	public abstract void ordenar(int i);
+	public abstract void ordenar(int i, Enemigo e);
 
 	public String getId(){
 		return id;
@@ -63,8 +63,8 @@ public abstract class Soldado {
 		return vida;
 	}
 
-	public void ataca(){
-		System.out.println(ataque.atacar(this));
+	public void ataca(Enemigo e){
+		System.out.println(ataque.atacar(this, e));
 	}
 
 	public void moverse(){

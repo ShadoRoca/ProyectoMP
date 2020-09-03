@@ -4,7 +4,7 @@ public class Enemigo{
 
 	public Enemigo(){
 		this.nombre = "Mounstro >:)";
-		this.vida = 1000.0;
+		this.vida = 2000.0;
 	}
 
 	public void setNombre(String s){

@@ -10,10 +10,10 @@ public class Caballeria extends Soldado{
 		this.setReporte(new ReportarCaballeria());
 	}
 
-	public void ordenar(int i){
+	public void ordenar(int i, Enemigo e){
 		switch(i){
 			case 1:
-				ataca();
+				ataca(e);
 				break;
 			case 2:
 				moverse();

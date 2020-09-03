@@ -3,7 +3,7 @@ public class Main{
 		//El numero 100 significa la distancia que recorreran.
 		Soldado c = new Comandante("12313", "Juan", 100);
 		//Estos set sirven para dotar de comportamientos al comandante.
-		c.setMovimiento(new MoverACaballo());
+		/*c.setMovimiento(new MoverACaballo());
 		c.setAtaque(new AtacarConPistola());
 		c.setReporte(new ReportarArtilleria());
 
@@ -14,17 +14,27 @@ public class Main{
 		c.add(x);
 		c.add(z);
 		c.add(y);
+		*/
 
 		FabricaEjercitos fabricaEjercitos = new FabricaEjercitos();
 		Ejercito ejercito = fabricaEjercitos.getEjercito("kamikaze");
 		Ejercito ejercitoEnemigo = fabricaEjercitos.getEjercito("default");
 
-		ejercito.recibeOrden(2);
+		Enemigo xd = new Enemigo();
+		ejercito.setEnemigo(xd);
+
+		/*ejercito.recibeOrden(2);
 		ejercito.recibeOrden(2);
 		ejercito.recibeOrden(3);
 		ejercito.recibeOrden(1);
 		ejercito.recibeOrden(2);
+		ejercito.recibeOrden(3);*/
+
 		ejercito.recibeOrden(3);
+		ejercito.recibeOrden(2);
+		ejercito.recibeOrden(1);
+		ejercito.recibeOrden(1);
+		System.out.println("La vida del mounstro es: " + xd.getVida());
 	
 	
 	}

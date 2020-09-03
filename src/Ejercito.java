@@ -8,6 +8,7 @@ public abstract class Ejercito {
 
     private ArrayList<Comandante> comandantes = new ArrayList<>();
     private double vida;
+    private Enemigo enemigo;
 
     /**
      * Recibe la orden para ser transmitida a todos los comandantes
@@ -15,7 +16,7 @@ public abstract class Ejercito {
      */
     public void recibeOrden(int i) {
         for (Comandante comandante : comandantes) {
-            comandante.ordenar(i);
+            comandante.ordenar(i, enemigo);
         }
     }
 
@@ -53,5 +54,13 @@ public abstract class Ejercito {
      */
     public void setVida(double vida) {
         this.vida = vida;
+    }
+
+    public Enemigo getEnemigo(){
+        return enemigo;
+    }
+
+    public void setEnemigo(Enemigo e){
+        this.enemigo = e;
     }
 }

@@ -37,7 +37,7 @@ public class Caballeria extends Soldado{
 	}
 
 	@Override
-	public String getInfo() {
-		return "   Soldado/a de tipo Caballeria " + name + " con id " + id + "."; 
+	public void getInfo() {
+		System.out.print("   Soldado/a de tipo Caballeria " + name + " con id " + id + "."); 
 	}
 }

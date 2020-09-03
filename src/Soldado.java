@@ -158,6 +158,6 @@ public abstract class Soldado {
 	 * regresa la informacion de todos sus subordinados
 	 * @return la informacion del solda
 	 */
-	public abstract String getInfo();
+	public abstract void getInfo();
 
 }

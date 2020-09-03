@@ -67,13 +67,16 @@ public class Comandante extends Soldado implements Observador {
 
 	}
 
+	public void updateInfo(){
+		this.getInfo();
+	}
+
 	@Override
-	public String getInfo() {
-		String c = " Comandante " + name + " con id " + id + "." + "\n";
+	public void getInfo() {
+		System.out.print(" Comandante " + name + " con id " + id + "." + "\n");
 		for (Soldado soldado : subordinados) {
-			String r = soldado.getInfo() + "\n";
-			c += r;
+			soldado.getInfo();
+			System.out.print("\n");
 		} 
-		return c;
 	}
 }

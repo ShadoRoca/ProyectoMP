@@ -27,17 +27,26 @@ public class Menu {
             case 1:
                 ejercito = fabricaEjercitos.getEjercito("explorador");
                 ejercito.setEnemigo(enemigoxd);
-                System.out.println("Escogiste el ejercito explorador:\n" + ejercito.getInfoEjercito());
+                System.out.println("Escogiste el ejercito explorador:\n");
+                ejercito.notificaInfoEjercito();
+                System.out.println("Vida inicial del enemigo = " + enemigoxd.getVida());
+                System.out.println("Distancia inicial del enemigo = " + ejercito.getComandante(0).getDistancia() + "\n");
                 break;
             case 2:
                 ejercito = fabricaEjercitos.getEjercito("default");
                 ejercito.setEnemigo(enemigoxd);
-                System.out.println("Escogiste el ejercito default:\n" + ejercito.getInfoEjercito());
+                System.out.println("Escogiste el ejercito default:\n");
+                ejercito.notificaInfoEjercito();
+                System.out.println("Vida inicial del enemigo = " + enemigoxd.getVida());
+                System.out.println("Distancia inicial del enemigo = " + ejercito.getComandante(0).getDistancia() + "\n");
                 break;
             case 3:
                 ejercito = fabricaEjercitos.getEjercito("kamikaze");
                 ejercito.setEnemigo(enemigoxd);
-                System.out.println("Escogiste el ejercito kamikaze:\n" + ejercito.getInfoEjercito());
+                System.out.println("Escogiste el ejercito kamikaze:\n");
+                ejercito.notificaInfoEjercito();
+                System.out.println("Vida inicial del enemigo = " + enemigoxd.getVida());
+                System.out.println("Distancia inicial del enemigo = " + ejercito.getComandante(0).getDistancia() + "\n");
                 break;
             default:
                 System.out.println("No es una opcion valida, vuelve a escoger...");

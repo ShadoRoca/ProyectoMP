@@ -20,4 +20,9 @@ public interface Sujeto{
 	 * @param i la orden: 1 es atacar, 2 es moverse y 3 es reportar
 	 */
 	public void notificaOrden(int i);
+
+	/**
+	 * Notifica al ejercito para que muestre su informacion.
+	 */
+	public void notificaInfoEjercito();
 }

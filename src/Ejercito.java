@@ -40,6 +40,13 @@ public abstract class Ejercito implements Sujeto{
             System.out.println("El comandante que intentas eliminar del ejercito, no existe");
         }
     }
+    /**
+     * Nos regresa el i-esimo comandante de la lista.
+     * @param i
+     */
+    public Comandante getComandante(int i) {
+        return (Comandante) comandantes.get(i);
+    }
 
     /**
      * Regresa la vida del ejercito
@@ -73,13 +80,13 @@ public abstract class Ejercito implements Sujeto{
         this.enemigo = e;
     }
 
-    public String getInfoEjercito() {
+    public void notificaInfoEjercito() {
         int i = 1;
-        String c = "";
+        System.out.print("\nLa informacion de este ejercito es: \n");
         for (Comandante comandante : comandantes) {
-            c += "Peloton " + i + ".\n" + comandante.getInfo();
+            System.out.print("Peloton " + i + ".\n"); 
+            comandante.updateInfo();
             i++;
         }
-        return "\nLa informacion de este ejercito es: \n" + c;
     }
 }

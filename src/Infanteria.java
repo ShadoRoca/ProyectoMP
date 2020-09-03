@@ -36,7 +36,7 @@ public class Infanteria extends Soldado{
 	}
 
 	@Override
-	public String getInfo() {
-		return "   Soldado/a de tipo Infanteria " + name + " con id " + id + "."; 
+	public void getInfo() {
+		System.out.print("   Soldado/a de tipo Infanteria " + name + " con id " + id + "."); 
 	}
 }

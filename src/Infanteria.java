@@ -1,5 +1,14 @@
+/**
+ * Representa un soldado de la clase infanteria
+ */
 public class Infanteria extends Soldado{
 
+	/**
+	 * Crea un infante
+	 * @param id el id del soldado
+	 * @param n el nombre del soldado
+	 * @param dist la distancia
+	 */
 	public Infanteria(String id, String n, int dist){
 		this.id = id;
 		this.name = n;

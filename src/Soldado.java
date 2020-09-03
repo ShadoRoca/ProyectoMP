@@ -1,6 +1,7 @@
 /**
- * Clase que utilizaremos para implemebtar los patrones de Composite y Strategy, tambien es la clase base
- * para Comandante y los tres tipos de soldado que existen.
+ * Clase que utilizaremos para implemebtar los patrones de Composite y Strategy,
+ * tambien es la clase base para Comandante y los tres tipos de soldado que
+ * existen.
  */
 
 public abstract class Soldado {
@@ -13,68 +14,150 @@ public abstract class Soldado {
 	private MovementBehaviour movimiento;
 	private ReportBehaviour reporte;
 
+	/**
+	 * Añade un soldado a la lista de subordinados de un soldado comandante
+	 * 
+	 * @param s el soldado
+	 */
+	public void add(Soldado s) {
+	}
 
-	public void add(Soldado s){}
+	/**
+	 * Elimina un soldado de la lista de subordinados de un soldado comandante
+	 * 
+	 * @param s el soldado
+	 */
+	public void remove(Soldado s) {
+	}
 
-	public void remove(Soldado s){}
-
-	public Soldado getChild(int i){
+	/**
+	 * Devuelve al soldado subordinado en la posicion i de la lista de subordinados
+	 * 
+	 * @param i la posicion
+	 * @return
+	 */
+	public Soldado getChild(int i) {
 		return null;
 	}
 
+	/**
+	 * Modifica la vida del soldado
+	 * 
+	 * @param vida nueva vida
+	 */
 	public void setVida(double vida) {
 		this.vida = vida;
 	}
 
-	public void setDistancia(double a){
+	/**
+	 * Modifica la distancia del soldado
+	 * 
+	 * @param a la nueva distancia
+	 */
+	public void setDistancia(double a) {
 		distancia = a;
 	}
 
-	public void setAtaque(AttackBehaviour a){
+	/**
+	 * Modifica el comportamiento al atacar
+	 * 
+	 * @param a el comportamiento
+	 */
+	public void setAtaque(AttackBehaviour a) {
 		ataque = a;
 	}
 
-
-	public void setMovimiento(MovementBehaviour a){
+	/**
+	 * Modifica que tanto avanza al moverse, el comportamiento de moviemiento
+	 * 
+	 * @param a el comportamiento
+	 */
+	public void setMovimiento(MovementBehaviour a) {
 		movimiento = a;
 	}
 
-
-	public void setReporte(ReportBehaviour a){
+	/**
+	 * Modifica el comportamiento al reportarse
+	 * 
+	 * @param a el comportamiento
+	 */
+	public void setReporte(ReportBehaviour a) {
 		reporte = a;
 	}
 
+	/**
+	 * Recibe una orden, si es un comandante la pasa a sus subordinados si no, solo
+	 * la cumple
+	 * 
+	 * @param i la orden: 1 para atacar, 2 para moverse, 3 para reportarse
+	 * @param e el enemigo que tiene asignado
+	 */
 	public abstract void ordenar(int i, Enemigo e);
 
-	public String getId(){
+	/**
+	 * Regresa el id del soldado
+	 * 
+	 * @return el id
+	 */
+	public String getId() {
 		return id;
 	}
 
-	public String getNombre(){
+	/**
+	 * Regresa el nombre del soldado
+	 * 
+	 * @return el nombre
+	 */
+	public String getNombre() {
 		return name;
 	}
 
-
-	public double getDistancia(){
+	/**
+	 * Regresa la distancia del soldado
+	 * 
+	 * @return la distancia
+	 */
+	public double getDistancia() {
 		return distancia;
 	}
 
-	public double getVida(){
+	/**
+	 * Regresa la vida del soldado
+	 * 
+	 * @return la vida
+	 */
+	public double getVida() {
 		return vida;
 	}
 
-	public void ataca(Enemigo e){
+	/**
+	 * Hace la accion correspondiente de atacar
+	 * 
+	 * @param e el enemigo al que ataca
+	 */
+	public void ataca(Enemigo e) {
 		System.out.println(ataque.atacar(this, e));
 	}
 
-	public void moverse(){
+	/**
+	 * Hace la accion correspondiente de atacar
+	 */
+	public void moverse() {
 		System.out.println(movimiento.mover(this));
 	}
 
-	public void reportarse(){
+	/**
+	 * Hace la accion correspondiente de reportarse
+	 */
+	public void reportarse() {
 		System.out.println(reporte.reportar(this));
 	}
 
+	/**
+	 * Nos regresa la informacion del soldado, si este es un comandante tambien nos
+	 * regresa la informacion de todos sus subordinados
+	 * @return la informacion del solda
+	 */
 	public abstract String getInfo();
 
 }

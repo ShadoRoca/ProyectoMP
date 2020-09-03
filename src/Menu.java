@@ -1,12 +1,17 @@
 import java.util.Scanner;
 
+/**
+ * Clase para unificar el proyecto, patron facade
+ */
 public class Menu {
 
     private FabricaEjercitos fabricaEjercitos = new FabricaEjercitos();
     private Ejercito ejercito;
     private Enemigo enemigoxd = new Enemigo();
 
-    
+    /**
+     * Nos da el menu para que el jugador escoja un ejercito
+     */
     public void menuEjercito() {
         Scanner in = new Scanner(System.in);
         System.out.println("Escoge un ejercito, se muestra la informacion de cada uno...");
@@ -41,9 +46,13 @@ public class Menu {
         }
     }
 
+    /**
+     * Hace la simulacion, recibe las ordenes del jugador para los comandantes
+     * mientras el enemigo siga vivo
+     */
     public void play() {
         Scanner in = new Scanner(System.in);
-        while(enemigoxd.getVida() > 0) {
+        while (enemigoxd.getVida() > 0) {
             System.out.println("Vida del enemigo = " + enemigoxd.getVida());
             System.out.println("¿Que accion quieres que tus comandantes ordenen a sus subordinados?");
             System.out.println("1 - ATACAR");
@@ -53,7 +62,7 @@ public class Menu {
         }
         System.out.println("Vida del enemigo = 0");
         System.out.println("---------------------------------------------------");
-        System.out.println("FELICIDADES"); 
+        System.out.println("FELICIDADES");
         System.out.println("LO LOGRASTE, TU EJERCITO DERROTO AL ENEMIGO");
         System.out.println("---------------------------------------------------");
         in.close();

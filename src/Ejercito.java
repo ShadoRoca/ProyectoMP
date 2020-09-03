@@ -57,10 +57,18 @@ public abstract class Ejercito implements Sujeto{
         this.vida = vida;
     }
 
+    /**
+     * Nos devuelve el enemigo asignado a este ejercito
+     * @return el enemigo
+     */
     public Enemigo getEnemigo(){
         return enemigo;
     }
 
+    /**
+     * Asigna un enemigo al ejercito
+     * @param e el enemigo
+     */
     public void setEnemigo(Enemigo e){
         this.enemigo = e;
     }

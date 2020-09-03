@@ -3,6 +3,9 @@
  */
 public class EjercitoDefault extends Ejercito {
 
+    /**
+     * Crea un ejercito default
+     */
     public EjercitoDefault() {
         //Crea el primer peloton
         Comandante comandante1 = new Comandante("101", "Marcos", 100);

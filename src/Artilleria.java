@@ -1,6 +1,15 @@
-
+/**
+ * Representa un soldado del tipo artilleria
+ * Patron composite/strategy
+ */
 public class Artilleria extends Soldado{
 
+	/**
+	 * Crea un artillero
+	 * @param id el id del soldado
+	 * @param n el nombre del soldado
+	 * @param dist la distancia que se encuentra del enemigo
+	 */
 	public Artilleria(String id, String n, int dist){
 		this.id = id;
 		this.name = n;

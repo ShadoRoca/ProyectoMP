@@ -1,8 +1,19 @@
 import java.util.ArrayList;
 
+/**
+ * Clase que representa a un comandante
+ * Patron composite/strategy/observer
+ */
 public class Comandante extends Soldado implements Observador {
+
 	ArrayList<Soldado> subordinados;
 
+	/**
+	 * Crea un comandante
+	 * @param id el id del soldado
+	 * @param n el nombre del soldado
+	 * @param dist la distancia
+	 */
 	public Comandante(String id, String n, int dist) {
 		this.subordinados = new ArrayList<Soldado>();
 		this.name = n;

@@ -1,5 +1,15 @@
+/**
+ * Clase que representa un soldado de la clase caballeria
+ * Patron strategy/composite
+ */
 public class Caballeria extends Soldado{
 
+	/**
+	 * Crea un soldado de caballeria
+	 * @param id el id del soldado
+	 * @param n el nombre del soldado
+	 * @param dist la distancia
+	 */
 	public Caballeria(String id, String n, int dist){
 		this.id = id;
 		this.name = n;
